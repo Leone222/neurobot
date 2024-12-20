@@ -1,0 +1,247 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #12141A;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    background-color: #1E212A;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+h1 {
+    color: #fff;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 20px;
+    position: relative; /* Add position relative */
+
+}
+
+
+input[type="text"],
+input[type="password"],
+button,
+select {
+    padding: 12px;
+    margin: 5px 0;
+    width: 100%;
+     font-size: 1rem;
+    border: 1px solid #2A2E39;
+    background: #2A2E39;
+    border-radius: 4px;
+      transition: border-color .3s ease;
+
+    color: #FFFFFF;
+
+        box-sizing: border-box;
+         display: block;
+
+  }
+    
+select{
+      cursor:pointer;
+       -moz-appearance: none; /* Firefox */
+       -webkit-appearance: none; /* Safari и Chrome */
+          appearance: none; /* Все остальные */
+
+       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23fff' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E");
+           background-repeat: no-repeat;
+    background-position: right 8px top 50%; /* Adjust as needed */
+
+}
+.input-group input:focus,
+.input-group select:focus {
+
+   outline: none;
+  border-color:#609FFF
+ }
+ .input-group  input::placeholder,  .input-group select::placeholder  {
+
+       opacity: 0.7;
+       transition: opacity 0.3s ease; /* Animation  for placeholder on input*/
+    }
+
+  .input-group   input:focus::placeholder ,.input-group   select:focus::placeholder{
+    opacity: 0;  /* hide pl when select and input on focus*/
+
+}
+ button {
+
+        background-color: #609FFF;
+
+        color: #FFFFFF;
+          font-size: 1.1rem;
+        border: 0px;
+
+    border-radius: 4px;
+
+        cursor: pointer;
+         display: block;
+
+   }
+
+      button:hover {
+        opacity: 0.9;
+        
+    }
+
+      input[type="password"]{
+
+            font-size:3rem;
+            letter-spacing:5px;
+           text-align: center;
+      }
+      .login-label {
+
+        font-size:3rem;
+            position:absolute;
+            top:50%;
+           left:0;
+
+         transform:translate(15%,-50%);
+
+          transition:.3s  transform ease ,  opacity .2s  ease
+      }
+
+
+      input:focus +  .login-label {
+
+     transform:translate(0%,-210%);
+
+
+             font-size: 1rem;
+              opacity:0.5;
+
+
+      }
+    select::-ms-expand {
+        display: none; /* remove arrow  in IE 10+ */
+      }
+
+        select[disabled] {
+    opacity: 0.6; /* Less visible for the  disabled input*/
+          pointer-events: none;  /* avoid selection on disabled option  */
+ }
+
+
+    input[disabled] {
+        opacity: 0.6; /* Less visible for the disabled  input */
+           pointer-events: none;   /* avoid input on disabled option */
+
+ }
+
+.card {
+
+   background: #2A2E39;
+      border: 1px solid #2A2E39;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+    .currency-pair-card {
+      display: flex;
+        justify-content: space-between;
+         align-items: center;
+        flex-wrap: wrap;
+    }
+.header {
+      width: 100%;
+      padding: 20px 0px;
+ }
+    #message_block {
+        font-size: 2rem;
+    text-align: center;
+ }
+ #main_app {
+
+     width: 100%;
+        min-height: 100vh;
+
+    display: none;
+        align-items: flex-start;
+       flex-direction: column;
+      justify-content: flex-start;
+
+ }
+
+     .settings_icon {
+        float: right;
+         font-size: 1.2rem;
+
+   }
+    #balance_container {
+      padding: 20px 10px;
+      display: block;
+     width: 100%;
+     margin-bottom: 15px;
+
+  }
+    #header_container {
+
+        padding: 20px 10px;
+      width: 100%;
+
+      display: flex;
+         justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+  }
+    .app-nav {
+        display: flex;
+       width: 100%;
+       flex-wrap: wrap;
+  }
+ .nav-tab {
+      display: inline-block;
+
+      padding: 10px 20px;
+     font-weight: bold;
+
+         cursor: pointer;
+       border-radius: 4px 4px 0 0;
+    }
+  .nav-tab.active {
+     border-bottom: 3px solid #609FFF; /* Active selected tab indicator */
+
+   }
+  .scroll-table {
+
+   max-height: 400px;
+      overflow-y: auto;
+
+
+ }
+   .order-tab {
+      width: 100%;
+        display: flex;
+
+      justify-content: space-between;
+     align-items: center;
+
+      padding: 10px 5px;
+    }
+    .scroll-table::-webkit-scrollbar {
+    width: 5px;
+
+}
+   .scroll-table::-webkit-scrollbar-track {
+     background: #1E212A;
+
+    }
+   .scroll-table::-webkit-scrollbar-thumb {
+
+   background: #609FFF;
+
+}

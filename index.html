@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>P2P Web App</title>
+    <link rel="stylesheet" href="style.css">
+     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+<div class="container" id="registration_container">
+    <h1>Регистрация</h1>
+      <div  class="input-group">
+           <input id="username_field" type="text" placeholder ="" >
+      </div>
+
+    <button id="reg_button" class="main-button" type="button">Продолжить</button>
+
+</div>
+<div class="container" id="login_container" >
+
+        <h1>Авторизация</h1>
+
+          <div class="input-group">
+             <input  id="login_pin" type="password" maxlength = "4"   />
+            <span  class = "login-label">Пин код</span>
+
+            </div>
+
+        <button id="auth_button" class="main-button" type="button">Войти</button>
+    </div>
+
+
+<div id="main_app">
+      <div  id="header_container">
+          
+           <h1 id ="header">Добро Пожаловать</h1>
+           
+       
+        <div class ="settings_icon"  id = "setting_button">
+           ⚙
+           </div>
+
+
+      </div>
+
+
+    <div id="message_block"  >
+        
+    </div>
+  <div id="dashboard_block">
+      <div   id = "balance_container"  class = "card">
+
+       
+         <span id="user_balance_string" style ="font-size: 1.5rem;"   >   </span>
+            <div  id = "balance_currencies">  </div>
+
+           
+            <select  disabled  id="user_select_currency" >
+
+
+          </select>
+
+      </div>
+
+   
+
+      <div   id="dashboard-nav"   class="app-nav" >
+
+        <div data-tab="currencies"  class="nav-tab active">Криптовалюта</div>
+        <div data-tab ="orders"  class="nav-tab">Мои ордера</div>
+           <div data-tab ="settings"  class="nav-tab">Настройки</div>
+
+
+    </div>
+       
+
+       
+       
+      <div data-section  ="currencies" id = "dashboard-content"   >
+          <div id = "currency-list"   > </div>
+
+         
+         </div>
+            <div data-section ="orders"   id  ="order-container" style="display: none;"  >
+
+
+                    <div  class="scroll-table"   >
+                          
+                     <div  id = "user_order_list"  >  </div>
+
+
+                         </div>
+        
+         </div>
+
+
+      <div data-section="settings"  id = "settings_block" style ="display:none">
+
+          <div   class="input-group">
+            <input   id ="change_username_field" type="text">
+                </div>
+
+
+     <div  class ="input-group"  >
+
+   
+       <select id="currency-select">
+
+
+      </select>
+
+          </div>
+
+
+   <div style="  display: flex;
+             justify-content: space-between;
+          align-items: center;
+
+   ">
+              <button style ="margin-right:10px" class ="main-button" type ="button"  id = "update_user_button">Обновить пользователя </button>
+
+                
+                <button  class ="main-button"   id ="update_pin_button"   type = "button"> Сменить PIN код</button>
+
+
+              </div>
+     </div>
+      
+</div>
+
+        
+         </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
